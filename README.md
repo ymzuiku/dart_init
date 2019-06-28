@@ -1,6 +1,16 @@
 # 便捷生成 dart 项目
 
-将当前项目注册到本地路径
+## 克隆项目
+
+```sh
+dart_init(){
+  git clone --depth=1 https://github.com/ymzuiku/dart_init $1 &&
+  cd $1 && rm -rf .git
+}
+dart_init <your-project>
+```
+
+## 将当前项目注册到本地路径
 
 ```yaml
 # pubspec.yaml
@@ -13,7 +23,7 @@ executables:
 $ pub global activate --source path ./ --overwrite
 ```
 
-使用本地命令执行:
+## 使用本地命令执行:
 
 ```sh
 $ dart_init ...

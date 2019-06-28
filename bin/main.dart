@@ -28,7 +28,6 @@ ${argParser.usage}
 void logic() {
   print(Directory.current.path);
   print(Process);
-  File(path.relative('README2.md')).writeAsStringSync(
-      File(path.relative('README.md', from: Directory.current.path))
-          .readAsStringSync());
+  File(path.relative('README2.md'))
+      .writeAsStringSync(File('../README.md').readAsStringSync());
 }
